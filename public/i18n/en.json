@@ -1,0 +1,32 @@
+{
+  "TITLE": "Subastas N&D",
+  "REGISTER": "Sign Up",
+  "LOGIN": "Sign In",
+  "SUPPORT": "Support",
+  "FAQ": "FAQs",
+  "CREATE_TICKET": "Create Ticket",
+  "LIVE_CHAT": "Live Chat",
+  "LANGUAGE": "Language",
+  
+  "WELCOME": "Welcome",
+  "EMAIL": "Email",
+  "PASSWORD": "Password",
+  "PLACEHOLDER_EMAIL": "Enter your email",
+  "PLACEHOLDER_PASSWORD": "Enter your password",
+  "FORGOT_PASSWORD": "Forgot your password?",
+  "OR_LOGIN_WITH": "Or login with",
+  "NO_ACCOUNT": "Don't have an account?",
+  "REGISTER_NOW": "Create one now",
+  "SLOGAN": "The best cattle in the market",
+
+  "AUCTION_CATALOG": "Auction Catalog",
+  "SEARCH_PLACEHOLDER": "Search for animals or descriptions...",
+  "ALL_CATEGORIES": "All Categories",
+  "ALL_STATUSES": "All Statuses",
+  "ACTIVE": "Active",
+  "CLOSED": "Closed",
+  "CATEGORY": "Category",
+  "STATUS": "Status",
+  "PRICE_INITIAL": "starting price",
+  "VIEW_DETAILS": "View Details"
+}

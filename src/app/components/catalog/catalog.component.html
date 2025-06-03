@@ -1,0 +1,36 @@
+<div class="catalog-container">
+  <h2>{{ 'AUCTION_CATALOG' | translate }}</h2>
+
+  <!-- Search and Filters -->
+  <div class="search-filters">
+    <input
+      type="text"
+      [(ngModel)]="searchQuery"
+      (input)="applyFilters()"
+      placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}"
+    />
+
+    <select [(ngModel)]="selectedCategory" (change)="applyFilters()">
+      <option value="">{{ 'ALL_CATEGORIES' | translate }}</option>
+      <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+    </select>
+
+    <select [(ngModel)]="selectedStatus" (change)="applyFilters()">
+      <option value="">{{ 'ALL_STATUSES' | translate }}</option>
+      <option value="active">{{ 'ACTIVE' | translate }}</option>
+      <option value="closed">{{ 'CLOSED' | translate }}</option>
+    </select>
+  </div>
+
+  <!-- Auction List -->
+  <div class="auction-list">
+    <div *ngFor="let auction of filteredAuctions" class="auction-card">
+      <h3>{{ auction.title }}</h3>
+      <p>{{ auction.description }}</p>
+      <p>{{ 'CATEGORY' | translate }}: {{ auction.category }}</p>
+      <p>{{ 'STATUS' | translate }}: {{ auction.status }}</p>
+      <p>{{ 'PRICE_INITIAL' | translate }}: {{ auction.price | currency }}</p>
+      <button routerLink="/auction/{{ auction.id }}">{{ 'VIEW_DETAILS' | translate }}</button>
+    </div>
+  </div>
+</div>

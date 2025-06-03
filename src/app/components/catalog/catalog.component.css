@@ -1,0 +1,56 @@
+.catalog-container {
+  padding: 1rem;
+
+  .search-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+    input, select {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f3dab1;
+      color: black;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  }
+
+  .auction-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+
+    .auction-card {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 1rem;
+      background-color: #f3dab1;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      color: black;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+      h3 {
+        margin-top: 0;
+      }
+
+      button {
+        margin-top: 0.5rem;
+        padding: 0.4rem 1rem;
+        border: none;
+        background-color: #edbc6d;
+        color: black;
+        border-radius: 6px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #c07701;
+        }
+      }
+    }
+  }
+}

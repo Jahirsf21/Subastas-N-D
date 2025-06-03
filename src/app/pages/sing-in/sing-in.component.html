@@ -1,1 +1,66 @@
-<p>hola este es el inicio de sesion</p>
+<header class="header">
+  <h1>
+    <img src="ND.png" alt="Logo" class="logo" />
+    {{ 'TITLE' | translate }}
+  </h1>
+  <nav>
+    <ul class="nav-list">
+      <li><a routerLink="/singUp" class="link">{{ 'REGISTER' | translate }}</a></li>
+      <li class="dropdown">
+        <a href="#" class="link1">{{ 'SUPPORT' | translate }}</a>
+        <ul class="dropdown-menu">
+          <li><a routerLink="/faqs" class="link">{{ 'FAQ' | translate }}</a></li>
+          <li><a routerLink="/ticket" class="link">{{ 'CREATE_TICKET' | translate }}</a></li>
+          <li><a routerLink="/chat" class="link">{{ 'LIVE_CHAT' | translate }}</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="link1">{{ 'LANGUAGE' | translate }}</a>
+        <ul class="dropdown-menu">
+          <li><a (click)="switchLang('es')" class="link">Español</a></li>
+          <li><a (click)="switchLang('en')" class="link">English</a></li>
+          <li><a (click)="switchLang('fr')" class="link">Français</a></li>
+          <li><a (click)="switchLang('pt')" class="link">Português</a></li>
+          <li><a (click)="switchLang('zh')" class="link">中文</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+<div class="login-container">
+  <div class="left-panel">
+    <img src="slogan.png" alt="Ganado" />
+    <div class="slogan">{{ 'SLOGAN' | translate }}</div>
+  </div>
+
+  <div class="right-panel">
+    <h1>{{ 'WELCOME' | translate }}</h1>
+
+    <form>
+      <label for="email">{{ 'EMAIL' | translate }}</label>
+      <input type="email" id="email" [placeholder]="'PLACEHOLDER_EMAIL' | translate" />
+
+      <div class="label-row">
+        <label for="password">{{ 'PASSWORD' | translate }}</label>
+        <a class="forgot" href="#">{{ 'FORGOT_PASSWORD' | translate }}</a>
+      </div>
+      <input type="password" id="password" [placeholder]="'PLACEHOLDER_PASSWORD' | translate" />
+
+      <button type="submit">{{ 'LOGIN' | translate }}</button>
+    </form>
+
+    <div class="divider">{{ 'OR_LOGIN_WITH' | translate }}</div>
+
+    <div class="social-login">
+      <button><img src="google.png" alt="Google" /> Google</button>
+      <button><img src="facebook.png" alt="Facebook" /> Facebook</button>
+    </div>
+
+    <p class="register">
+      {{ 'NO_ACCOUNT' | translate }} <a routerLink="/singUp">{{ 'REGISTER_NOW' | translate }}</a>
+    </p>
+  </div>
+</div>
+

@@ -1,5 +1,31 @@
-<app-header></app-header>
-<body>
-  
-
-</body>
+<header class="header">
+  <h1>
+    <img src="ND.png" alt="Logo" class="logo" />
+    {{ 'TITLE' | translate }}
+  </h1>
+  <nav>
+    <ul class="nav-list">
+      <li><a routerLink="/singUp" class="link">{{ 'REGISTER' | translate }}</a></li>
+      <li><a routerLink="/singIn" class="link">{{ 'LOGIN' | translate }}</a></li>
+      <li class="dropdown">
+        <a href="#" class="link1">{{ 'SUPPORT' | translate }}</a>
+        <ul class="dropdown-menu">
+          <li><a routerLink="/faqs" class="link">{{ 'FAQ' | translate }}</a></li>
+          <li><a routerLink="/ticket" class="link">{{ 'CREATE_TICKET' | translate }}</a></li>
+          <li><a routerLink="/chat" class="link">{{ 'LIVE_CHAT' | translate }}</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="link1">{{ 'LANGUAGE' | translate }}</a>
+        <ul class="dropdown-menu">
+          <li><a (click)="switchLang('es')" class="link">Español</a></li>
+          <li><a (click)="switchLang('en')" class="link">English</a></li>
+          <li><a (click)="switchLang('fr')" class="link">Français</a></li>
+          <li><a (click)="switchLang('pt')" class="link">Português</a></li>
+          <li><a (click)="switchLang('zh')" class="link">中文</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+<app-catalog></app-catalog>
